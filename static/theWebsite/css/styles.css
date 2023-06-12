@@ -1,0 +1,47 @@
+.navbar {
+  z-index: 5; 
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.nav-item {
+  font-weight: 600;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+  color: #a3552e !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.testimony-section {
+  background-color: #4c351d;
+}
+
+.img-fluid {
+  width: 300px;
+  border-radius: 20%;
+}
+
+footer {
+  background-color: #4c351d !important;
+}
+
+.footer-p {
+  color: #fff !important;
+}
+
+.text-primary {
+  color: #fff;
+}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Who's Jesus?{% endblock %}
+
+{% block content %}
+    <!-- Homepage content goes here -->
+
+    <section class="hero d-flex align-items-center justify-content-center">
+        <div class="container text-left">
+          <h1 style="padding-bottom: 25px; color: #000;">Do you want to know more about Jesus Christ?</h1>
+          <h3 style="padding-bottom: 25px; color: #000;">You have come to the right place</h3>
+          <a href="#section2" class="btn btn-primary mt-3">Learn more</a>
+        </div>
+      </section>      
+
+    <section id="section2" class="mt-5" style="padding-top: 200px; padding-bottom: 200px;">
+        <div class="container text-center">
+            <h2>
+            2000 years ago an ordinary woman was visited by an <a href="https://www.biblegateway.com/passage/?search=Luke%201%3A26-38&version=ESV" target="_blank"> Angel </a> and she was told she was going to conceive by the Holy Spirit
+            </h2>
+
+            <h5 style="padding-top: 25px;">
+              <p>
+                From that was born a man known to many today as the light of the world 
+                <a href="https://www.biblegateway.com/passage/?search=John%208%3A12&version=ESV" target="_blank"> John 8:12</a>
+              </p>
+            </h5>
+        
+        </div>
+    </section>
+
+
+    <section class="testimony-section" id="testimony-section" style="background-color: #b29267; color: #fff">
+        <div class="container py-5">
+          <h2 class="mb-4" style="padding-bottom: 35px;">
+            The light of the world was not only a light that shone 2000 years ago but still shines in many people's lives today <a href="{% url 'theWebsite:testimonies' %}">see testimonies</a>
+          </h2>
+          
+          <div class="row">
+
+            <div class="col-md-4">
+              <h4>Jesus brings transformation</h4>
+              <p>
+                <iframe width="360" height="315" src="https://www.youtube.com/embed/IJyUhRvGZPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h4>God our rescuer</h4>
+              <p>
+                <iframe width="360" height="315" src="https://www.youtube.com/embed/OaNtiL01Xh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </p>
+            </div>
+
+            <div class="col-md-4">
+              <h4>Finding the TRUTH in Jesus</h4>
+              <p>
+                <iframe width="360" height="315" src="https://www.youtube.com/embed/1Dd2uRJRThU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </p>
+            </div>
+
+          </div>
+
+
+        </div>
+      </section>
+      
+
+    <section class="bg-light">
+
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1 class="mb-4">
+                      If you have been touched by testimonies you have watched and wish to make Jesus the Lord of your life pray this prayer:
+                    </h1>
+                    <h4 class="mb-4">
+                        Lord Jesus, I confess my sins and ask for your forgiveness. Please come into my heart as my Lord and Savior. Take complete control of my life and help me to walk in Your footsteps daily by the power of the Holy Spirit. Thank you Lord for saving me and for answering my prayer.
+                    </h4>
+                    <h5 class="mb-4">
+                        Congratulations, Your life will never be the same! Here's what's next: <a href="https://content.cfan.org/recklesslove/booklet/ntyas.pdf" target="_blank">Now that you are saved</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

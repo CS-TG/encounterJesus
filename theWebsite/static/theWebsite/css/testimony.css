@@ -1,0 +1,22 @@
+.test-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.text-center {
+    text-align: center;
+}
+  
+.row {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 500%;
+}
+
+h1, p {
+    color: #a3552e;
+}

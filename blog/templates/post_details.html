@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ post.author.title }} {% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/post_details.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="post-details">
+
+        <div class="author-section">
+            {% if post.image and post.image.url %}
+            <img src="{{ post.image.url }}" alt="Blog Image" class="blog-image author-image">
+            {% endif %}
+            <h1 class="author-title">{{ post.author.title }}</h1>
+            <small class="author-info">By: {{ post.author.first_name }} - {{ post.category }}</small>
+        </div>
+                
+        <div class="content-section">
+            {{ post.content }}
+        </div>
+        
+        <a href="{% url 'blog:blog' %}" class="back-link">Back</a>
+    </div> 
+
+{% endblock %}
