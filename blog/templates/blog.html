@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h1></h1>
+
+    <div class="blog-container">
+        <div class="row">
+          {% for post in object_list %}
+          <div class="col-md-4">
+            <div class="blog-post">
+
+                {% if post.image and post.image.url %}
+                    <img src="{{ post.image.url }}" alt="Blog Image" class="blog-image">
+                {% endif %}
+
+                <a href="{% url 'blog:article-detail' post.pk %}">
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.category }}</p>
+                </a> 
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      
+
+{% endblock %}

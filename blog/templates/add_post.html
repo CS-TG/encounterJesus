@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}Testify, Share, Encourage{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/add_post.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-section">
+    <h1>Share your story with others</h1>
+
+    <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+        <div class="form-group">
+        <label for="{{ form.title.id_for_label }}">Title</label>
+        {{ form.title }}
+        </div>
+    
+        <div class="form-group">
+        <label for="{{ form.author.id_for_label }}">Author</label>
+        {{ form.author }}
+        </div>
+    
+        <div class="form-group">
+        <label for="{{ form.category.id_for_label }}">Category</label>
+        {{ form.category }}
+        </div>
+    
+        <div class="form-group">
+        <label for="{{ form.content.id_for_label }}">Content</label>
+        {{ form.content }}
+        </div>
+    
+        <div class="form-group">
+        <label for="{{ form.image.id_for_label }}">Image</label>
+        {{ form.image }}
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+
+  
+{% endblock %}

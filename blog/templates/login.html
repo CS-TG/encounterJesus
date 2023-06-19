@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block styles %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-section">
+
+    <h1>Uplift other believers </h1>
+
+    <h2>Testify • Encourage • Fellowship</h2>
+
+    <form action="{% url 'blog:authenticate_user' %}" method="post">
+        
+        {% csrf_token %}
+
+        <label>Username</label>
+        <input type="text" name="username" placeholder="User" required>
+
+        <br/><br/>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <br/><br/>
+
+        <input type="submit" value="Login" />
+    </form>
+
+</div>
+
+{% endblock %}
