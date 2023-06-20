@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>blog package &mdash; Christian&#39;s Blog 00.00.01 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="blog.migrations package" href="blog.migrations.html" />
+    <link rel="prev" title="mySite" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Christian's Blog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mySite</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">blog package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html">blog.migrations package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.admin">blog.admin module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.apps">blog.apps module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blog.apps.BlogConfig"><code class="docutils literal notranslate"><span class="pre">BlogConfig</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.forms">blog.forms module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blog.forms.RegistrationForm"><code class="docutils literal notranslate"><span class="pre">RegistrationForm</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.models">blog.models module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blog.models.Post"><code class="docutils literal notranslate"><span class="pre">Post</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.tests">blog.tests module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.urls">blog.urls module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog.views">blog.views module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.AddPostView"><code class="docutils literal notranslate"><span class="pre">AddPostView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.PostDetailedView"><code class="docutils literal notranslate"><span class="pre">PostDetailedView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.PostForm"><code class="docutils literal notranslate"><span class="pre">PostForm</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.PostView"><code class="docutils literal notranslate"><span class="pre">PostView</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.authenticate_user"><code class="docutils literal notranslate"><span class="pre">authenticate_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.logout_view"><code class="docutils literal notranslate"><span class="pre">logout_view()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.register"><code class="docutils literal notranslate"><span class="pre">register()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#blog.views.user_login"><code class="docutils literal notranslate"><span class="pre">user_login()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-blog">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="manage.html">manage module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mySite.html">mySite package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="theWebsite.html">theWebsite package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Christian's Blog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">mySite</a></li>
+      <li class="breadcrumb-item active">blog package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/blog.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="blog-package">
+<h1>blog package<a class="headerlink" href="#blog-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blog.migrations.html">blog.migrations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0001_initial">blog.migrations.0001_initial module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.initial"><code class="docutils literal notranslate"><span class="pre">Migration.initial</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0001_initial.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations.0002_post_image">blog.migrations.0002_post_image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blog.migrations.html#blog.migrations.0002_post_image.Migration"><code class="docutils literal notranslate"><span class="pre">Migration</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0002_post_image.Migration.dependencies"><code class="docutils literal notranslate"><span class="pre">Migration.dependencies</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="blog.migrations.html#blog.migrations.0002_post_image.Migration.operations"><code class="docutils literal notranslate"><span class="pre">Migration.operations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="blog.migrations.html#module-blog.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.admin">
+<span id="blog-admin-module"></span><h2>blog.admin module<a class="headerlink" href="#module-blog.admin" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.apps">
+<span id="blog-apps-module"></span><h2>blog.apps module<a class="headerlink" href="#module-blog.apps" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.apps.</span></span><span class="sig-name descname"><span class="pre">BlogConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">app_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">app_module</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/apps.html#BlogConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.apps.BlogConfig" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AppConfig</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig.default_auto_field">
+<span class="sig-name descname"><span class="pre">default_auto_field</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'django.db.models.BigAutoField'</span></em><a class="headerlink" href="#blog.apps.BlogConfig.default_auto_field" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.apps.BlogConfig.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'blog'</span></em><a class="headerlink" href="#blog.apps.BlogConfig.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.forms">
+<span id="blog-forms-module"></span><h2>blog.forms module<a class="headerlink" href="#module-blog.forms" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.forms.</span></span><span class="sig-name descname"><span class="pre">RegistrationForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/forms.html#RegistrationForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.forms.RegistrationForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">UserCreationForm</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/blog/forms.html#RegistrationForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.forms.RegistrationForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('username',</span> <span class="pre">'email',</span> <span class="pre">'password1',</span> <span class="pre">'password2')</span></em><a class="headerlink" href="#blog.forms.RegistrationForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.forms.RegistrationForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'username':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#blog.forms.RegistrationForm.base_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'email':</span> <span class="pre">&lt;django.forms.fields.EmailField</span> <span class="pre">object&gt;,</span> <span class="pre">'password1':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'password2':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#blog.forms.RegistrationForm.declared_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blog.forms.RegistrationForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#blog.forms.RegistrationForm.media" title="Permalink to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.models">
+<span id="blog-models-module"></span><h2>blog.models module<a class="headerlink" href="#module-blog.models" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.models.Post">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.models.</span></span><span class="sig-name descname"><span class="pre">Post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">content</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/models.html#Post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.models.Post" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.CATEGORY_CHOICES">
+<span class="sig-name descname"><span class="pre">CATEGORY_CHOICES</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('Testimony',</span> <span class="pre">'Testimony'),</span> <span class="pre">('Encouragement',</span> <span class="pre">'Encouragement'),</span> <span class="pre">('General',</span> <span class="pre">'General')]</span></em><a class="headerlink" href="#blog.models.Post.CATEGORY_CHOICES" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="blog.models.Post.DoesNotExist">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">DoesNotExist</span></span><a class="headerlink" href="#blog.models.Post.DoesNotExist" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ObjectDoesNotExist</span></code></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="blog.models.Post.MultipleObjectsReturned">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">MultipleObjectsReturned</span></span><a class="headerlink" href="#blog.models.Post.MultipleObjectsReturned" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">MultipleObjectsReturned</span></code></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#blog.models.Post.author" title="Permalink to this definition"></a></dt>
+<dd><p>Accessor to the related object on the forward side of a many-to-one or
+one-to-one (via ForwardOneToOneDescriptor subclass) relation.</p>
+<p>In the example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">parent</span> <span class="o">=</span> <span class="n">ForeignKey</span><span class="p">(</span><span class="n">Parent</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;children&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Child.parent</span></code> is a <code class="docutils literal notranslate"><span class="pre">ForwardManyToOneDescriptor</span></code> instance.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.author_id">
+<span class="sig-name descname"><span class="pre">author_id</span></span><a class="headerlink" href="#blog.models.Post.author_id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.category">
+<span class="sig-name descname"><span class="pre">category</span></span><a class="headerlink" href="#blog.models.Post.category" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.content">
+<span class="sig-name descname"><span class="pre">content</span></span><a class="headerlink" href="#blog.models.Post.content" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_absolute_url">
+<span class="sig-name descname"><span class="pre">get_absolute_url</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/models.html#Post.get_absolute_url"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.models.Post.get_absolute_url" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.models.Post.get_category_display">
+<span class="sig-name descname"><span class="pre">get_category_display</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field=&lt;django.db.models.fields.CharField:</span> <span class="pre">category&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#blog.models.Post.get_category_display" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.id">
+<span class="sig-name descname"><span class="pre">id</span></span><a class="headerlink" href="#blog.models.Post.id" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.image">
+<span class="sig-name descname"><span class="pre">image</span></span><a class="headerlink" href="#blog.models.Post.image" title="Permalink to this definition"></a></dt>
+<dd><p>Just like the FileDescriptor, but for ImageFields. The only difference is
+assigning the width/height to the width_field/height_field, if appropriate.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.objects">
+<span class="sig-name descname"><span class="pre">objects</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;django.db.models.manager.Manager</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#blog.models.Post.objects" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.models.Post.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#blog.models.Post.title" title="Permalink to this definition"></a></dt>
+<dd><p>A wrapper for a deferred-loading field. When the value is read from this
+object the first time, the query is executed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-blog.tests">
+<span id="blog-tests-module"></span><h2>blog.tests module<a class="headerlink" href="#module-blog.tests" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.urls">
+<span id="blog-urls-module"></span><h2>blog.urls module<a class="headerlink" href="#module-blog.urls" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-blog.views">
+<span id="blog-views-module"></span><h2>blog.views module<a class="headerlink" href="#module-blog.views" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.AddPostView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">AddPostView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#AddPostView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.AddPostView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">LoginRequiredMixin</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code></p>
+<p>Handles the creation of new posts.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.AddPostView.form_class">
+<span class="sig-name descname"><span class="pre">form_class</span></span><a class="headerlink" href="#blog.views.AddPostView.form_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.views.PostForm" title="blog.views.PostForm"><code class="xref py py-class docutils literal notranslate"><span class="pre">PostForm</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.views.AddPostView.form_valid">
+<span class="sig-name descname"><span class="pre">form_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#AddPostView.form_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.AddPostView.form_valid" title="Permalink to this definition"></a></dt>
+<dd><p>Sets the logged-in user as the author of the post.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.views.AddPostView.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#AddPostView.get"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.AddPostView.get" title="Permalink to this definition"></a></dt>
+<dd><p>Displays the form for adding a new post.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.views.AddPostView.get_form">
+<span class="sig-name descname"><span class="pre">get_form</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">form_class</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#AddPostView.get_form"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.AddPostView.get_form" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the form instance with the author field hidden.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.AddPostView.login_url">
+<span class="sig-name descname"><span class="pre">login_url</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'blog:login'</span></em><a class="headerlink" href="#blog.views.AddPostView.login_url" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.AddPostView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.views.AddPostView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="blog.views.AddPostView.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#AddPostView.post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.AddPostView.post" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the submission of the form for adding a new post.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.AddPostView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'add_post.html'</span></em><a class="headerlink" href="#blog.views.AddPostView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostDetailedView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">PostDetailedView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#PostDetailedView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostDetailedView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DetailView</span></code></p>
+<p>Displays the details of a specific post.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostDetailedView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.views.PostDetailedView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostDetailedView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'post_details.html'</span></em><a class="headerlink" href="#blog.views.PostDetailedView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostForm">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">PostForm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">files=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_id='id_%s'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_class=&lt;class</span> <span class="pre">'django.forms.utils.ErrorList'&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_suffix=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_permitted=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instance=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_required_attribute=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">renderer=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#PostForm"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostForm" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ModelForm</span></code></p>
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostForm.Meta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Meta</span></span><a class="reference internal" href="_modules/blog/views.html#PostForm.Meta"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostForm.Meta" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostForm.Meta.fields">
+<span class="sig-name descname"><span class="pre">fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'__all__'</span></em><a class="headerlink" href="#blog.views.PostForm.Meta.fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostForm.Meta.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.views.PostForm.Meta.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">Post</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostForm.base_fields">
+<span class="sig-name descname"><span class="pre">base_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'author':</span> <span class="pre">&lt;django.forms.models.ModelChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'category':</span> <span class="pre">&lt;django.forms.fields.TypedChoiceField</span> <span class="pre">object&gt;,</span> <span class="pre">'content':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;,</span> <span class="pre">'image':</span> <span class="pre">&lt;django.forms.fields.ImageField</span> <span class="pre">object&gt;,</span> <span class="pre">'title':</span> <span class="pre">&lt;django.forms.fields.CharField</span> <span class="pre">object&gt;}</span></em><a class="headerlink" href="#blog.views.PostForm.base_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostForm.declared_fields">
+<span class="sig-name descname"><span class="pre">declared_fields</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#blog.views.PostForm.declared_fields" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blog.views.PostForm.media">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">media</span></span><a class="headerlink" href="#blog.views.PostForm.media" title="Permalink to this definition"></a></dt>
+<dd><p>Return all media required to render the widgets on this form.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="blog.views.PostView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">PostView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#PostView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.PostView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ListView</span></code></p>
+<p>Displays a list of posts.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostView.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#blog.views.PostView.model" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#blog.models.Post" title="blog.models.Post"><code class="xref py py-class docutils literal notranslate"><span class="pre">Post</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="blog.views.PostView.template_name">
+<span class="sig-name descname"><span class="pre">template_name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'blog.html'</span></em><a class="headerlink" href="#blog.views.PostView.template_name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.authenticate_user">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">authenticate_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#authenticate_user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.authenticate_user" title="Permalink to this definition"></a></dt>
+<dd><p>Authenticates the user and redirects to the appropriate page based on the authentication result.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.logout_view">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">logout_view</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#logout_view"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.logout_view" title="Permalink to this definition"></a></dt>
+<dd><p>Logs out the user and redirects to the index page.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.register">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.register" title="Permalink to this definition"></a></dt>
+<dd><p>Handles the user registration process.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="blog.views.user_login">
+<span class="sig-prename descclassname"><span class="pre">blog.views.</span></span><span class="sig-name descname"><span class="pre">user_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/blog/views.html#user_login"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#blog.views.user_login" title="Permalink to this definition"></a></dt>
+<dd><p>Displays the login page.</p>
+</dd></dl>
+
+</section>
+<section id="module-blog">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-blog" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="mySite" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="blog.migrations.html" class="btn btn-neutral float-right" title="blog.migrations package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Tshwarelo Matinketja.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
